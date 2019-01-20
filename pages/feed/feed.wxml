@@ -1,0 +1,9 @@
+<!--pages/feed/feed.wxml-->
+<view>
+  <view>{{year}}年{{month}}月{{day}}日</view>
+  <van-row gutter="20">
+    <van-col span="8">span: 8</van-col>
+    <van-col span="8">span: 8</van-col>
+    <van-col span="8">span: 8</van-col>
+  </van-row>
+</view>
