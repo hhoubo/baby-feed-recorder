@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "van-row": "../../node_modules/vant-weapp/dist/row/index",
-    "van-col": "../../node_modules/vant-weapp/dist/col/index"
+    "van-row": "../../lib/vant-weapp/dist/row/index",
+    "van-col": "../../lib/vant-weapp/dist/col/index"
   }
 }

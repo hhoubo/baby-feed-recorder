@@ -1,4 +1,4 @@
-@import "node_modules/vant-weapp/dist/common/index.wxss";
+@import "lib/vant-weapp/dist/common/index.wxss";
 /**app.wxss**/
 .container {
   height: 100%;
