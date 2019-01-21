@@ -1,33 +1,26 @@
 // pages/feed/feed.js
-const date = new Date()
-const years = []
-const months = []
-const days = []
-
-for (let i = 1990; i <= date.getFullYear(); i++) {
-  years.push(i)
+var now = new Date();
+const dateFormat = { year: 'numeric', month: '2-digit', day: '2-digit'};
+const timeFormat = {
+  hour: '2-digit', minute: '2-digit', second: '2-digit',
+  hour12: false,
+  timeZone: 'Asia/Tokyo'
 }
 
-for (let i = 1; i <= 12; i++) {
-  months.push(i)
-}
-
-for (let i = 1; i <= 31; i++) {
-  days.push(i)
-}
 Page({
 
   /**
    * Page initial data
    */
   data: {
-    years: years,
-    year: date.getFullYear(),
-    months: months,
-    month: 2,
-    days: days,
-    day: 2,
-    value: [9999, 1, 1],
+    now: now,
+    date: now.toLocaleDateString("zh-Hans-CN", dateFormat),
+    time: now.toLocaleTimeString("zh-Hans-CN", timeFormat),
+    active: 0,
+    startBtnDisabled: false,
+    finishBtnDisabled: true,
+    startTime: "",
+    finishTime: ""
   },
 
   /**
@@ -36,19 +29,25 @@ Page({
   onLoad: function (options) {
 
   },
-
   /**
    * Lifecycle function--Called when page is initially rendered
    */
   onReady: function () {
-
+    let that = this;
+    this.interval = setInterval(function () {
+      var current = new Date();
+      that.setData({
+        now: current,
+        date: current.toLocaleDateString("zh-CN", dateFormat),
+        time: current.toLocaleTimeString("zh-CN", timeFormat)
+      });
+    }, 1000);
   },
-
   /**
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-
+    
   },
 
   /**
@@ -85,12 +84,33 @@ Page({
   onShareAppMessage: function () {
 
   },
-  bindChange: function (e) {
-    const val = e.detail.value
+
+  /**
+   * Switch the feed tabs
+   */
+  onChange(event) {
+    // wx.showToast({
+    //   title: `切换到 ${event.detail.index + 1}`,
+    //   icon: 'none'
+    // });
+  },
+
+  onFeedStart(event) {
     this.setData({
-      year: this.data.years[val[0]],
-      month: this.data.months[val[1]],
-      day: this.data.days[val[2]]
-    })
+      startBtnDisabled: true, 
+      finishBtnDisabled: false,
+      startTime: this.data.time
+      });
+    console.log("start date:" + this.data.date);
+    console.log("start time:" + this.data.time);
+  },
+
+  onFeedFinish(event){
+    this.setData({ 
+      startBtnDisabled: false, 
+      finishBtnDisabled: true,
+      
+      finishTime: this.data.time
+    });
   }
 })

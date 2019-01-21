@@ -1,5 +1,38 @@
 /* pages/feed/feed.wxss */
-.intro {
+.date {
   margin: 30px;
   text-align: center;
 }
+.time {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 56px;
+  padding: 5px;
+}
+.clickable-hover{
+  background-color: gainsboro;
+}
+.operation-tab {
+  padding: 1rem 1rem;
+  text-align: center;
+}
+.m-5 {
+  margin:3rem;
+}
+.m-4 {
+  margin: 2rem;
+}
+.m-3 {
+  margin: 1rem;
+}
+.m-2 {
+  margin: .5rem;
+}
+.m-1 {
+  margin: .25rem;
+}
+.feedBtns {
+  margin: 6rem 1rem;
+}
+
+
