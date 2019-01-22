@@ -6,7 +6,7 @@
 .time {
   margin-bottom: 30px;
   text-align: center;
-  font-size: 56px;
+  font-size: 32px;
   padding: 5px;
 }
 .clickable-hover{
@@ -32,7 +32,13 @@
   margin: .25rem;
 }
 .feedBtns {
-  margin: 6rem 1rem;
+  margin: 4rem 1rem;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
 }
 
 

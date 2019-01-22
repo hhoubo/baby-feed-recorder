@@ -4,6 +4,13 @@
     "van-col": "../../lib/vant-weapp/dist/col/index",
     "van-tab": "../../lib/vant-weapp/dist/tab/index",
     "van-tabs": "../../lib/vant-weapp/dist/tabs/index",
-    "van-button": "../../lib/vant-weapp/dist/button/index"
+    "van-button": "../../lib/vant-weapp/dist/button/index",
+    "van-panel": "../../lib/vant-weapp/dist/panel/index",
+    "van-cell-group": "../../lib/vant-weapp/dist/cell-group/index",
+    "van-cell": "../../lib/vant-weapp/dist/cell/index",
+    "van-field": "../../lib/vant-weapp/dist/field/index",
+    "van-radio": "../../lib/vant-weapp/dist/radio/index",
+    "van-radio-group": "../../lib/vant-weapp/dist/radio-group/index"
+
   }
 }

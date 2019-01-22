@@ -9,15 +9,59 @@
     </van-col>
     <van-col span="24">
       <van-tabs active="{{ active }}" bind:change="onChange">
-        <van-tab class="operation-tab" title="母乳">
-        <view wx:if="{{startTime}}">开始喂奶: {{startTime}}</view>
-        <view wx:if="{{finishTime}}">结束喂奶: {{finishTime}}</view>
-        <view class='feedBtns'>
+        <van-tab class="operation-tab" title="亲喂">
+          <view wx:if="{{startTime}}">开始喂奶: {{startTime}}</view>
+          <view wx:if="{{finishTime}}">结束喂奶: {{finishTime}}</view>
+          <van-row>
+                    <van-radio-group value="{{ radioBreast }}" bind:change="onRadioBreastChange">
+                      <van-col offset="4" span="8">
+                        <van-radio name="breastLeft">左边</van-radio>
+                      </van-col>
+                      <van-col span="8">
+                        <van-radio name="breastRight">右边</van-radio>
+                      </van-col>
+                    </van-radio-group>
+                  </van-row>
+          <view class='feedBtns'>
             <van-button id="startFeedBtn" class="m-4" type="primary" disabled="{{startBtnDisabled}}" bind:click="onFeedStart">开始</van-button>
-            <van-button id="finishFeedBtn" class="m-4" type="danger" disabled="{{finishBtnDisabled}}" bind:click="onFeedFinish">结束</van-button>
-        </view>
+            <van-button id="finishFeedBtn" class="m-4" type="danger" 
+            disabled="{{finishBtnDisabled}}" bind:click="onFeedFinish">结束</van-button>
+          </view>
         </van-tab>
-        <van-tab title="奶瓶">内容 2</van-tab>
+        <van-tab title="瓶喂">
+          <van-panel>
+            <view>
+              <van-cell-group>
+                <van-cell>
+                  <van-row>
+                    <van-col span="10" offset="4">
+                      <van-field value="60" placeholder="请输入奶量" label="奶量" border="{{ false }}" 
+                      type="number" input-align="right" />
+                    </van-col>
+                    <van-col span="4">
+                      <view >ml</view>
+                    </van-col>
+                  </van-row>
+                </van-cell>
+                <van-cell>
+                  <van-row>
+                    <van-radio-group value="{{ radioBottle }}" bind:change="onRadioBottleChange">
+                      <van-col offset="4" span="8">
+                        <van-radio name="milk">奶粉</van-radio>
+                      </van-col>
+                      <van-col span="8">
+                        <van-radio name="breast">母乳</van-radio>
+                      </van-col>
+                    </van-radio-group>
+                  </van-row>
+                </van-cell>
+              </van-cell-group>
+            </view>
+            <view class='m-5' >
+              <van-button type="primary">确定</van-button>
+            </view>
+          </van-panel>
+        </van-tab>
       </van-tabs>
     </van-col>
   </van-row>

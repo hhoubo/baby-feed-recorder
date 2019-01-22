@@ -3,8 +3,7 @@ var now = new Date();
 const dateFormat = { year: 'numeric', month: '2-digit', day: '2-digit'};
 const timeFormat = {
   hour: '2-digit', minute: '2-digit', second: '2-digit',
-  hour12: false,
-  timeZone: 'Asia/Tokyo'
+  hour12: false
 }
 
 Page({
@@ -14,13 +13,15 @@ Page({
    */
   data: {
     now: now,
-    date: now.toLocaleDateString("zh-Hans-CN", dateFormat),
-    time: now.toLocaleTimeString("zh-Hans-CN", timeFormat),
+    date: now.toLocaleDateString("zh-Hans-CN"),
+    time: now.toTimeString(),
     active: 0,
     startBtnDisabled: false,
     finishBtnDisabled: true,
     startTime: "",
-    finishTime: ""
+    finishTime: "",
+    radioBreast: "breastLeft",
+    radioBottle: "milk"
   },
 
   /**
@@ -38,8 +39,8 @@ Page({
       var current = new Date();
       that.setData({
         now: current,
-        date: current.toLocaleDateString("zh-CN", dateFormat),
-        time: current.toLocaleTimeString("zh-CN", timeFormat)
+        date: current.toLocaleDateString("zh-CN"),
+        time: current.toTimeString()
       });
     }, 1000);
   },
@@ -112,5 +113,16 @@ Page({
       
       finishTime: this.data.time
     });
+  },
+
+  onRadioBreastChange(event) {
+    this.setData({
+      radioBreast: event.detail
+    })
+  },
+  onRadioBottleChange(event) {
+    this.setData({
+      radioBottle: event.detail
+    })
   }
 })
