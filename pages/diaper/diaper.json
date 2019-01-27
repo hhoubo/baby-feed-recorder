@@ -1,4 +1,5 @@
 {
+  "navigationBarTitleText": "换尿布",
   "usingComponents": {
     "van-checkbox": "../../lib/vant-weapp/dist/checkbox/index",
     "van-checkbox-group": "../../lib/vant-weapp/dist/checkbox-group/index",

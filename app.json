@@ -10,7 +10,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "新生宝宝喂奶记录",
     "navigationBarTextStyle": "black"
   },
   "usingComponents": {},

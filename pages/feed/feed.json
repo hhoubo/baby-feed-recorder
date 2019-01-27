@@ -1,4 +1,5 @@
 {
+  "navigationBarTitleText": "喂奶",
   "usingComponents": {
     "van-row": "../../lib/vant-weapp/dist/row/index",
     "van-col": "../../lib/vant-weapp/dist/col/index",
