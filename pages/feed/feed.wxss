@@ -41,4 +41,9 @@
   float: right;
 }
 
+.just-center {
+  line-height: 44px;
+  text-align: center; 
+  vertical-align: middle;
+}
 

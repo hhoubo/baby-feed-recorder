@@ -1,15 +1,36 @@
-
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
     "pages/feed/feed",
-    "pages/babyProfile/profile"
+    "pages/diaper/diaper",
+    "pages/logs/logs",
+    "pages/babyProfile/profile",
+    "pages/index copy/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {},
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "backgroundColor": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "记录"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "历史"
+      },
+      {
+        "pagePath": "pages/babyProfile/profile",
+        "text": "宝宝"
+      }
+    ]
   }
 }

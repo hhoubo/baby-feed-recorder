@@ -1,4 +1,5 @@
 // pages/feed/feed.js
+const app = getApp(); 
 var now = new Date();
 const dateFormat = { year: 'numeric', month: '2-digit', day: '2-digit'};
 const timeFormat = {
@@ -21,7 +22,8 @@ Page({
     startTime: "",
     finishTime: "",
     radioBreast: "breastLeft",
-    radioBottle: "milk"
+    radioBottle: "milk",
+    bottleAmount: 50
   },
 
   /**
@@ -124,5 +126,13 @@ Page({
     this.setData({
       radioBottle: event.detail
     })
+  },
+  tabbarOnChange: function(e) {
+    app.tabbarOnChange(e);
+  },
+  sliderChange(event) {
+    this.setData({
+      bottleAmount: event.detail.value
+    });
   }
 })

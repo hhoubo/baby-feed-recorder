@@ -11,6 +11,5 @@
     "van-field": "../../lib/vant-weapp/dist/field/index",
     "van-radio": "../../lib/vant-weapp/dist/radio/index",
     "van-radio-group": "../../lib/vant-weapp/dist/radio-group/index"
-
   }
 }

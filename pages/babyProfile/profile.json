@@ -1,3 +1,11 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "van-row": "../../lib/vant-weapp/dist/row/index",
+    "van-col": "../../lib/vant-weapp/dist/col/index",
+    "van-button": "../../lib/vant-weapp/dist/button/index",
+    "van-panel": "../../lib/vant-weapp/dist/panel/index",
+    "van-cell-group": "../../lib/vant-weapp/dist/cell-group/index",
+    "van-cell": "../../lib/vant-weapp/dist/cell/index",
+    "van-field": "../../lib/vant-weapp/dist/field/index"
+  }
 }

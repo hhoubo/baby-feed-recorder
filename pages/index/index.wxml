@@ -1,13 +1,18 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
+  <!-- <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  </view> -->
+  <view class="">
+    <view class="flex-wrp body-view" style="height: 360px;flex-direction:column;">
+      <navigator name="feed" class="flex-item card just-center feature" hover-class='card-hover' url='../feed/feed' open-type='navigate'>喂奶</navigator>
+      <navigator name="diaper" class="flex-item card just-center" hover-class='card-hover' url='../diaper/diaper' open-type='navigate'>
+        <text name="diaper" class="feature">换尿布</text>
+      </navigator>
+    </view>
   </view>
 </view>

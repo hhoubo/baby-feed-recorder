@@ -1,3 +1,4 @@
+@import "/lib/weui.wxss";
 /**index.wxss**/
 .userinfo {
   display: flex;
@@ -16,6 +17,32 @@
   color: #aaa;
 }
 
-.usermotto {
-  margin-top: 200px;
+.page-section{
+  margin-bottom: 20rpx;
+}
+.flex-wrp {
+  display: flex;
+  height: 100vh;
+}
+
+.card {
+  padding: 10px;
+  margin: 10px;
+  width: 100%;
+  height: 5rem;
+  line-height: 5rem;
+  border:1px solid black;
+  border-radius: 10px;
+  background-color: rgba(131, 232, 245, 0.5)
+}
+.card-hover {
+  background-color: rgba(131, 232, 245, 1)
+}
+.just-center {
+  text-align: center; 
+  vertical-align: middle;
+}
+.feature {
+  font-size: 32px;
+  align-content: center;
 }

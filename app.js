@@ -35,6 +35,29 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    tabbarActive: 0
+  },
+  tabbarOnChange: function (e) {
+    let that = this
+    that.globalData.tabbarActive = e.detail;
+    if (that.globalData.tabbarActive == 0) {
+      wx.reLaunch({
+        url: '/pages/feed/feed'
+      })
+    } else if (that.globalData.tabbarActive == 1) {
+      wx.reLaunch({
+        url: '/pages/logs/logs'
+      })
+    } else if (that.globalData.tabbarActive == 2) {
+      wx.reLaunch({
+        url: '/pages/babyProfile/profile'
+      })
+    } else {
+      wx.reLaunch({
+        url: '/pages/index/index'
+      })
+    }
+
   }
 })

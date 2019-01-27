@@ -1,0 +1,13 @@
+<!--pages/diaper/diaper.wxml-->
+<van-panel use-footer-slot>
+  <view>
+    <van-checkbox-group value="{{ result }}" bind:change="onCheckboxChange">
+      <van-checkbox wx:for="{{ list }}" wx:key="index" name="{{ item }}">
+        {{ item }}
+      </van-checkbox>
+    </van-checkbox-group>
+  </view>
+  <view slot="footer">
+    <van-button size="small" type="primary">确定</van-button>
+  </view>
+</van-panel>

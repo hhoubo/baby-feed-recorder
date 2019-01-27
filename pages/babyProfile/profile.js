@@ -1,11 +1,15 @@
 // pages/babyProfile/profile.js
+const app = getApp(); 
 Page({
 
   /**
    * Page initial data
    */
   data: {
-
+    tabbarActive : app.globalData.tabbarActive,
+    babyName: "",
+    gender: "",
+    birthday: "2019-01-27"
   },
 
   /**
@@ -61,6 +65,8 @@ Page({
    * Called when user click on the top right corner to share
    */
   onShareAppMessage: function () {
-
+  },
+  tabbarOnChange: function (e) {
+    app.tabbarOnChange(e);
   }
 })

@@ -1,2 +1,17 @@
 <!--pages/babyProfile/profile.wxml-->
-<text>pages/babyProfile/profile.wxml</text>
+<van-panel use-footer-slot>
+  <van-cell-group>
+    <van-field value="{{ babyName }}" clearable label="姓名" icon="question-o" placeholder="请输入宝宝的名字" bind:click-icon="onClickIcon" />
+
+    <van-field value="{{ gender }}" label="性别" placeholder="请输入宝宝性别" border="{{ false }}" />
+
+    <picker mode="date" value="{{birthday}}" start="2019-01-27" end="2025-12-31" bindchange="bindDateChange">
+      <view class="picker">
+        生日： {{birthday}}
+      </view>
+    </picker>
+  </van-cell-group>
+  <view slot="footer">
+    <van-button size="small" type="primary">确定</van-button>
+  </view>
+</van-panel>
